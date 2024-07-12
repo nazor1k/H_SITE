@@ -1,0 +1,14 @@
+.card-wrapper {
+  min-width: 360px;
+  width: 360px;
+  height: fit-content;
+}
+
+.card-image {
+  margin: 10px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: flex-end;
+}
