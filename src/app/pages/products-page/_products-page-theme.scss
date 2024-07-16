@@ -3,17 +3,22 @@
 
 @mixin color($theme) {
   .background {
-    background-color: mat.get-theme-color($theme, surface);
+    background-color: mat.get-theme-color($theme, primary-container);
   }
   .title {
-    color: mat.get-theme-color($theme, on-surface);
+    color: mat.get-theme-color($theme, primary);
   }
+
 }
 
 @mixin typography($theme) {
   .title {
     font: mat.get-theme-typography($theme, headline-large, font);
   }
+  .description{
+    font: mat.get-theme-typography($theme, label-medium, font);
+  }
+
 }
 
 @mixin theme($theme) {

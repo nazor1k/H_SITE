@@ -1,0 +1,12 @@
+<div class="background">
+  <h1 class="title">Вільні товари</h1>
+
+  <div class="cards">
+    @for (product of this.products; track product.id) {
+ <app-product-card [title]="product.title" [description]="product.description" [image]="product.image" [category]="product.category"></app-product-card>
+}
+
+
+  </div>
+
+</div>
