@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+
+@use '@angular/material' as mat;
+@use 'app/pages/products-page/products-page-theme' as app-theme;
+
+@include mat.core();
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$my-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+
+  )
+));
+//$azure-palette
+//$blue-palette
+html {
+  //@include app-theme.color($my-theme);
+  //@include app-theme.typography($my-theme);
+  @include app-theme.theme($my-theme);
+
+}
+
+

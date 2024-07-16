@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {
   MatCard,
   MatCardActions,
@@ -8,6 +8,7 @@ import {
   MatCardTitle
 } from "@angular/material/card";
 import {MatButton} from "@angular/material/button";
+import {NgClass, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-product-card',
@@ -20,11 +21,22 @@ import {MatButton} from "@angular/material/button";
     MatCardContent,
     MatCardActions,
     MatCardImage,
-    MatButton
+    MatButton,
+    NgStyle,
+    NgClass
   ],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
+
+
+    @Input() title: string= "";
+
+    @Input() description: string= "";
+
+    @Input() category: string= "";
+
+    @Input() image: string= "";
 
 }
